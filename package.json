@@ -1,0 +1,25 @@
+{
+  "name": "jdots",
+  "version": "1.0.0",
+  "description": "A collection of vector libs and noise functions to support particle animation in JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stkterry/jDots.git"
+  },
+  "keywords": [
+    "vectors",
+    "javascript",
+    "particles",
+    "noise"
+  ],
+  "author": "Steven Terry, stkterry",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/stkterry/jDots/issues"
+  },
+  "homepage": "https://github.com/stkterry/jDots#readme"
+}
