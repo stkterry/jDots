@@ -116,7 +116,7 @@ class Vec3D {
       maxMag = minMag;
       minMag = 0;
     }
-    const mag = (maxMag - minMag) * random() + minMag,
+    const mag = (maxMag - minMag) * random() + minMag;
     const theta = Math.random() * Math.PI;
     const phi = Math.random() * Math.PI * 2 - Math.PI;
     return new Vec3D(
