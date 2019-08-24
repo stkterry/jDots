@@ -1,11 +1,11 @@
-import Vec2D from "../vector/vec2D";
+import Vec2 from "../vector/Vec2";
 
 
 class Particle2D {
   constructor(pos, vel, acc) {
-    this.pos = new Vec2D(pos.x, pos.y) || new Vec2D();
-    this.vel = new Vec2D(vel.x, vel.y) || new Vec2D();
-    this.acc = new Vec2D(acc.x, acc.y) || new Vec2D();
+    this.pos = new Vec2(pos.x, pos.y) || new Vec2();
+    this.vel = new Vec2(vel.x, vel.y) || new Vec2();
+    this.acc = new Vec2(acc.x, acc.y) || new Vec2();
   }
 
   update(acc) {

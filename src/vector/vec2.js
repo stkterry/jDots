@@ -1,6 +1,6 @@
 const TWO_PI = Math.PI;
 
-class Vec2D {
+class Vec2 {
   constructor(x = 0, y = 0) {
     this.x = x;
     this.y = y;
@@ -54,12 +54,12 @@ class Vec2D {
   // helpers
 
   dup() {
-    return new Vec2D(this.x, this.y);
+    return new Vec2(this.x, this.y);
   }
 
   dupUnit() {
     let norm = this.getNorm();
-    return new Vec2D(this.x / norm, this.y / norm);
+    return new Vec2(this.x / norm, this.y / norm);
   }
 
   distTo(vec) {
@@ -81,6 +81,11 @@ class Vec2D {
     this.scale(mag);
   }
 
+  project(vec) {
+    let vecUnit = vec.dupUnit();
+    return this.dup().dot(vecUnit);
+  }
+
   // Class methods
 
   static dot(vec1, vec2) {
@@ -93,7 +98,7 @@ class Vec2D {
 
   static angleBetween(vec1, vec2) {
     return Math.acos(
-      Vec2D.dot(vec1, vec2) / (vec1.getNorm() * vec2.getNorm())
+      Vec2.dot(vec1, vec2) / (vec1.getNorm() * vec2.getNorm())
     )
   }
 
@@ -115,9 +120,9 @@ class Vec2D {
       x = mag * cos(angle),
       y = mag * sin(angle);
 
-    return new Vec2D(x, y);
+    return new Vec2(x, y);
   };
 
 }
 
-export default Vec2D;
+export default Vec2;

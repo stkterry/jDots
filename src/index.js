@@ -1,8 +1,8 @@
-import Vec2D from "./vector/vec2D";
-import Vec3D from "./vector/vec3D";
+import Vec2 from "./vector/Vec2";
+import Vec3 from "./vector/Vec3";
 
 
 module.exports = {
-  Vec2D: Vec2D,
-  Vec3D: Vec3D
+  Vec2: Vec2,
+  Vec3: Vec3
 }

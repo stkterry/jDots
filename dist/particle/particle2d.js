@@ -5,15 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _vec2D = _interopRequireDefault(require("../vector/vec2D"));
+var _Vec = _interopRequireDefault(require("../vector/Vec2"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 class Particle2D {
   constructor(pos, vel, acc) {
-    this.pos = new _vec2D.default(pos.x, pos.y) || new _vec2D.default();
-    this.vel = new _vec2D.default(vel.x, vel.y) || new _vec2D.default();
-    this.acc = new _vec2D.default(acc.x, acc.y) || new _vec2D.default();
+    this.pos = new _Vec.default(pos.x, pos.y) || new _Vec.default();
+    this.vel = new _Vec.default(vel.x, vel.y) || new _Vec.default();
+    this.acc = new _Vec.default(acc.x, acc.y) || new _Vec.default();
   }
 
   update(acc) {

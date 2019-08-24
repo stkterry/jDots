@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 const TWO_PI = Math.PI;
 
-class Vec2D {
+class Vec2 {
   constructor() {
     let x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
     let y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
@@ -60,12 +60,12 @@ class Vec2D {
 
 
   dup() {
-    return new Vec2D(this.x, this.y);
+    return new Vec2(this.x, this.y);
   }
 
   dupUnit() {
     let norm = this.getNorm();
-    return new Vec2D(this.x / norm, this.y / norm);
+    return new Vec2(this.x / norm, this.y / norm);
   }
 
   distTo(vec) {
@@ -97,7 +97,7 @@ class Vec2D {
   }
 
   static angleBetween(vec1, vec2) {
-    return Math.acos(Vec2D.dot(vec1, vec2) / (vec1.getNorm() * vec2.getNorm()));
+    return Math.acos(Vec2.dot(vec1, vec2) / (vec1.getNorm() * vec2.getNorm()));
   }
 
   static angleRel(vec1, vec2) {
@@ -117,10 +117,10 @@ class Vec2D {
           angle = random() * Math.TWO_PI,
           x = mag * cos(angle),
           y = mag * sin(angle);
-    return new Vec2D(x, y);
+    return new Vec2(x, y);
   }
 
 }
 
-var _default = Vec2D;
+var _default = Vec2;
 exports.default = _default;
